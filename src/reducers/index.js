@@ -1,5 +1,5 @@
 import Attribute from '../structs/Attribute';
-import { SET_BASE_ATTRS, SET_CHAR_INFO } from "../constants/action-types";
+import { SET_BASE_ATTRS, SET_CHAR_INFO, SET_LIFESTYLE } from "../constants/action-types";
 
 
 const initialState = {
@@ -58,6 +58,14 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         charInfo: {
           ...state.charInfo,
+          ...action.payload
+        }
+      }
+    case SET_LIFESTYLE:
+      return {
+        ...state,
+        lifestyle: {
+          ...state.lifestyle,
           ...action.payload
         }
       }
