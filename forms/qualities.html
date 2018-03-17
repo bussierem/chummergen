@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Qualities</title>
+  </head>
+  <body>
+    <form>
+      <table>
+        <tr>
+          <th></th>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Rating</th>
+        </tr>
+        <tr>
+          <td>
+            <button id="qual_0_reorder" onClick="">=</button>
+          </td>
+          <td>
+            <input type="radio" name="qual_0_type" value="pos" />+
+            <input type="radio" name="qual_0_type" value="neg" />-
+          </td>
+          <td>
+            <input type="text" id="qual_0_name" />
+          </td>
+          <td>
+            <input type="number" id="qual_0_rating" />
+          </td>
+          <td>
+            <button id="qual_0_delete" onClick="">X</button>
+          </td>
+          <!-- These will go underneath each quality and be collapsible! -->
+          <button id="qual_0_notes_toggle" onClick="">></button>
+          <label for="qual_0_notes">Notes:</label>
+          <textarea id="qual_0_notes"></textarea>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

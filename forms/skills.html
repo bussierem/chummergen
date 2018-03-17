@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Skills</title>
+  </head>
+  <body>
+    <form>
+      <table>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Group</th>
+          <th>Rating</th>
+          <th>Attribute</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td>
+            <button id="skill_0_reorder" onClick="">=</button>
+          </td>
+          <td>
+            <input type="text" id="skill_0_name" />
+          </td>
+          <td>
+            <!-- This will autocomplete to the group or "None" based on the skill input -->
+            <label id="skill_0_group">None</label>
+          </td>
+          <td>
+            <input type="number" id="skill_0_rating" />
+          </td>
+          <td>
+            <select id="skill_0_attr">
+              <optgroup label="Physical" id="skill_0_attr_phys">
+                <option value="STR">STR</option>
+                <option value="AGI">AGI</option>
+                <option value="REA">REA</option>
+                <option value="BOD">BOD</option>
+              </optgroup>
+              <optgroup label="Mental" id="skill_0_attr_ment">
+                <option value="WIS">WIS</option>
+                <option value="INT">INT</option>
+                <option value="LOG">LOG</option>
+                <option value="CHA">CHA</option>
+              </optgroup>
+              <optgroup label="Special" id="skill_0_attr_spec">
+                <option value="MAG">MAG</option>
+                <option value="RES">RES</option>
+              </optgroup>
+            </select>
+          </td>
+          <td>
+            <!-- This will be a set of small "buttons" that toggle on/off as radios -->
+            <input type="radio" name="skill_0_type" value="A" />A
+            <input type="radio" name="skill_0_type" value="K" />K
+            <input type="radio" name="skill_0_type" value="L" />L
+          </td>
+          <td>
+            <button id="skill_0_delete" onClick="">X</button>
+          </td>
+        </tr>
+        <!--
+        These buttons should arrange _under_ each skill, with the list of
+        specializations first, then a button to add another spec under the list.
+        -->
+        <button id="skill_0_addSpec" onClick="">Spec</button><br />
+        <input type="text" id="skill_0_spec_0" /> | +2
+      </table>
+      <button id="addSkill" onClick="">New Skill</button>
+    </form>
+  </body>
+</html>

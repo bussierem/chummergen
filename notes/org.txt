@@ -1,0 +1,16 @@
+EVERY SHEET:
+  --Personal Info/Lifestyle
+  --Attributes/Skills
+  --Qualities
+  --Contacts
+  --Gear
+  Notes
+
+OPTIONAL ELEMENTS:
+  Mage
+    Adept
+    Magic
+  Technomancer
+  Cyberware
+  Decker
+  Rigger
