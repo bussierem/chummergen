@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import { Route } from 'react-router'
+import { Route } from 'react-router';
 // Component imports
 import Sidebar from './Sidebar';
-import PersonalInfo from './PersonalInfo'
-import AttrSkills from './AttrSkills'
+import PersonalInfo from './PersonalInfo';
+import AttrSkills from './AttrSkills';
+import Contacts from './Contacts';
+import Gear from './Gear';
+import Qualities from './Qualities';
+import Decker from './Decker';
+import Rigger from './Rigger';
 
 /* Boilerplate for page
 class _ extends Component {
@@ -52,7 +57,13 @@ class App extends Component {
         <div className="main content">
           <Route exact path='/' component={PersonalInfo}/>
           <Route exact path='/personalInfo' component={PersonalInfo}/>
+          <Route exact path='/qualities' component={Qualities}/>
           <Route exact path='/attrSkills' component={AttrSkills}/>
+          <Route exact path='/contacts' component={Contacts}/>
+          <Route exact path='/gear' component={Gear}/>
+
+          <Route exact path='/decker' component={Decker}/>
+          <Route exact path='/rigger' component={Rigger}/>
         </div>
       </div>
     );
@@ -60,21 +71,12 @@ class App extends Component {
 }
 
 /*
-<Sidebar docked sidebar={sidebarContent.render()}
-         styles={sidebarStyles}>
-</Sidebar>
-
   <Route exact path='/notes' component={Notes}/>
-  <Route exact path='/qualities' component={Qualities}/>
-  <Route exact path='/contacts' component={Contacts}/>
-  <Route exact path='/gear' component={Gear}/>
   <Route exact path='/spellcasting' component={Spellcasting}/>
   <Route exact path='/summoning' component={Summoning}/>
   <Route exact path='/adept' component={Adept}/>
   <Route exact path='/technomancer' component={Technomancer}/>
   <Route exact path='/warez' component={Warez}/>
-  <Route exact path='/decker' component={Decker}/>
-  <Route exact path='/rigger' component={Rigger}/>
   <Route exact path='/settings' component={Settings}/>
 */
 

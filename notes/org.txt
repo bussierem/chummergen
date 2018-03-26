@@ -13,4 +13,4 @@ OPTIONAL ELEMENTS:
   Technomancer
   Cyberware
   Decker
-  Rigger
+  --Rigger
