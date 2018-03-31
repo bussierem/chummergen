@@ -3,6 +3,7 @@ import {
   SET_BASE_ATTRS,
   SET_CHAR_INFO,
   SET_LIFESTYLE,
+  SET_SKILLS,
   SET_CONTACTS,
   SET_GEAR,
   SET_SPELLS,
@@ -56,6 +57,16 @@ const initialState = {
     RES: new Attribute("RES"),
     PP:  new Attribute("PP"),
   },
+  skills: [
+    {
+      name: "",
+      description: "",
+      rating: 0,
+      count: 0,
+      price: 0,
+      specializations: []
+    }
+  ],
   contacts: [
     {
       name: "",
@@ -219,6 +230,11 @@ const rootReducer = (state = initialState, action) => {
           ...state.lifestyle,
           ...action.payload
         }
+      }
+    case SET_SKILLS:
+      return {
+        ...state,
+        skills: action.payload
       }
     case SET_CONTACTS:
       return {

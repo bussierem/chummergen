@@ -1,26 +1,87 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-
-function mapDispatchToProps(dispatch) {
-  return {
-
-  };
-};
+import { setSkills } from '../../actions/index';
 
 function mapStateToProps(state) {
   return {
-    skills: state.skills
+    skills: state.skills,
+    skill_count: state.skills.length
   };
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+    setSkills: skills => dispatch(setSkills(skills)),
+  };
+};
 
 class Skills extends Component {
   constructor(props) {
     super(props);
     this.skills = props.skills;
-    this.state = {};
+    this.state = {
+      skills: this.props.skills
+    };
+
+    this.dataChanged = this.dataChanged.bind(this);
+    this.addSkills = this.addSkills.bind(this);
+  }
+
+  dataChanged(e) {
+    var skills = [];
+    var rows = Array.from(document.getElementById('skillsDiv').querySelectorAll('tr[id*="skill_"]'));
+    rows.forEach((row, i) =>{
+      // Main data
+      var skillsData = Array.from(document.getElementById(row.id).querySelectorAll('input, textarea'));
+      var data = skillsData.reduce((acc, s, i) => {
+        acc[s.id.replace(/(?:skill_\d+_)/, '')] = s.value;
+        return acc;
+      }, {})
+      // Specializations
+      var skillSpecsData = Array.from(document.getElementById(`skill_${i}_specs_div`).querySelectorAll('label'));
+      data['specializations'] = skillSpecsData.reduce((acc, s) => {
+        acc.push(s.innerHTML);
+        return acc;
+      }, []);
+      // Finished
+      skills.push(data);
+    });
+    this.props.setSkills(skills);
+  }
+
+  addSkills() {
+    this.props.skills.push({
+      name: "",
+      description: "",
+      rating: 0,
+      count: 0,
+      price: 0,
+      specializations: []
+    });
+    this.props.setSkills(this.props.skills);
+  }
+
+  addSpecialization(index) {
+    var name = document.getElementById(`skill_${index}_name`).value;
+    var specInput = document.getElementById(`skill_${index}_newSpec`);
+    var spec = specInput.value;
+    this.props.skills.forEach(s => console.log(s));
+    var skill = this.props.skills.filter(s => {s.name === name})[0]
+    skill['specializations'].push(spec);
+    specInput.value = '';
   }
 
   render() {
+    var skillSpecializations = (skill, i) => {
+      return skill.specializations.map((spec, c) => {
+        return (
+          <span>
+            <label id={`skill_${i}_spec_${c}`}>{spec}</label><br />
+          </span>
+        )
+      });
+    };
+
     return (
       <div id="skillsDiv">
         <table className="expandingTable">
@@ -33,7 +94,7 @@ class Skills extends Component {
             <th>Type</th>
           </tr>
           {
-            this.props.gear.map((c, i) => {
+            this.props.skills.map((c, i) => {
               return (
                 <tr key={i} id={`skill_${i}`}>
                   <td>
@@ -41,6 +102,13 @@ class Skills extends Component {
                   </td>
                   <td>
                     <input type="text" id={`skill_${i}_name`} />
+                    <div id={`skill_${i}_specs_div`}>
+                      {skillSpecializations(c, i)}
+                      <input type="text" id={`skill_${i}_newSpec`} />
+                      <button id={`skill_${i}_addSpec`}
+                      onClick={() => {this.addSpecialization(i)}}
+                      >Add Spec</button><br />
+                    </div>
                   </td>
                   <td>
                     <label id={`skill_${i}_group`}>None</label>
@@ -75,10 +143,6 @@ class Skills extends Component {
                   </td>
                   <td>
                     <button id={`skill_${i}_delete`} onClick="">X</button>
-                  </td>
-                  <td>
-                    <button id={`skill_${i}_addSpec`} onClick="">Spec</button><br />
-                    <input type="text" id={`skill_${i}_spec_0`} /> | +2
                   </td>
                 </tr>
               )

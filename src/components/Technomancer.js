@@ -8,10 +8,10 @@ class Technomancer extends Component {
   render() {
     return (
       <div>
-        <PageSection sectionTitle='Persona'>
+        <PageSection sectionTitle='Living Persona'>
           <Persona />
         </PageSection>
-        <PageSection sectionTitle='ComplexForms'>
+        <PageSection sectionTitle='Complex Forms'>
           <ComplexForms />
         </PageSection>
       </div>

@@ -85,8 +85,8 @@ class Spirits extends Component {
         (k) => {return k !== 'bound'} // skip bound
       ).map((key, x) => { return (
         <div key={x}>
-          <label for={`spirit_${i}_key}`}>{unCamel(key)}:</label>
-          <label id={`spirit_${i}_key}`}>{spirit[key]}</label>
+          <label for={`spirit_${i}_${key}`}>{unCamel(key)}:</label>
+          <label id={`spirit_${i}_${key}`}>{spirit[key]}</label>
         </div>
       )})
     };

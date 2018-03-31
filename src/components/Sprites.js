@@ -77,8 +77,8 @@ class Sprites extends Component {
         (k) => {return k !== 'registered'} // skip registered
       ).map((key, x) => { return (
         <div key={x}>
-          <label for={`sprite_${i}_key}`}>{unCamel(key)}:</label>
-          <label id={`sprite_${i}_key}`}>{sprite[key]}</label>
+          <label htmlFor={`sprite_${i}_${key}`}>{unCamel(key)}:</label>
+          <label id={`sprite_${i}_${key}`}>{sprite[key]}</label>
         </div>
       )})
     };
