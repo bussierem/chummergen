@@ -10,6 +10,8 @@ import Gear from './Gear';
 import Spells from './Spells';
 import Spirits from './Spirits';
 import Powers from './Powers';
+import Technomancer from './Technomancer';
+import Sprites from './Sprites';
 import Qualities from './Qualities';
 import Warez from './Warez';
 import Decker from './Decker';
@@ -68,6 +70,8 @@ class App extends Component {
           <Route exact path='/spellcasting' component={Spells}/>
           <Route exact path='/summoning' component={Spirits}/>
           <Route exact path='/adept' component={Powers}/>
+          <Route exact path='/technomancer' component={Technomancer}/>
+          <Route exact path='/compiling' component={Sprites}/>
           <Route exact path='/warez' component={Warez}/>
           <Route exact path='/decker' component={Decker}/>
           <Route exact path='/rigger' component={Rigger}/>
@@ -79,7 +83,6 @@ class App extends Component {
 
 /*
   <Route exact path='/notes' component={Notes}/>
-  <Route exact path='/technomancer' component={Technomancer}/>
   <Route exact path='/settings' component={Settings}/>
 */
 

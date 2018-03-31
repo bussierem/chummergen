@@ -1,6 +1,6 @@
 const SPIRITS = {
   "Air": {
-    "type": "Air",
+    "Type": "Air",
     "Skills": ["Assensing", "Astral Combat", "Exotic Ranged Weapon", "Perception", "Running", "Unarmed Combat"],
     "Powers": ["Accident", "Astral Form", "Concealment", "Confusion", "Engulf", "Materialization", "Movement", "Sapience", "Search"],
     "Optional Powers": ["Elemental Attack", "Energy Aura", "Fear", "Guard", "Noxious Breath", "Psychokinesis"],
@@ -19,7 +19,7 @@ const SPIRITS = {
     "Init (Ast)": "(F*2)+3d6"
   },
   "Beast": {
-    "type": "Beast",
+    "Type": "Beast",
     "Skills": ["Assensing", "Astral Combat", "Perception", "Unarmed Combat"],
     "Powers": ["Animal Control", "Astral Form", "Enhanced Senses (Hearing", "Low-Light Vision", "Smell)", "Fear", "Materialization", "Movement", "Sapience"],
     "Optional Powers": ["Concealment", "Confusion", "Guard", "Natural Weapon (Drain Value = Force Physical damage", "AP —)", "Noxious Breath", "Search", "Venom"],
@@ -38,7 +38,7 @@ const SPIRITS = {
     "Init (Ast)": "(F*2)+3d6"
   },
   "Earth": {
-    "type": "Earth",
+    "Type": "Earth",
     "Skills": ["Assensing", "Astral Combat", "Exotic Ranged Weapon", "Perception", "Unarmed Combat"],
     "Powers": ["Astral Form", "Binding", "Guard", "Materialization", "Movement", "Sapience", "Search"],
     "Optional Powers": ["Concealment", "Confusion", "Engulf", "Elemental Attack", "Fear"],
@@ -57,7 +57,7 @@ const SPIRITS = {
     "Init (Ast)": "(F*2)+3d6"
   },
   "Fire": {
-    "type": "Fire",
+    "Type": "Fire",
     "Skills": ["Assensing", "Astral Combat", "Exotic Ranged Weapon", "Flight", "Perception", "Unarmed Combat"],
     "Powers": ["Accident", "Astral Form", "Confusion", "Elemental Attack", "Energy Aura", "Engulf", "Materialization", "Sapience"],
     "Optional Powers": ["Fear", "Guard", "Noxious Breath", "Search"],
@@ -76,7 +76,7 @@ const SPIRITS = {
     "Init (Ast)": "(F*2)+3d6"
   },
   "Man": {
-    "type": "Man",
+    "Type": "Man",
     "Skills": ["Assensing", "Astral Combat", "Perception", "Spellcasting", "Unarmed Combat"],
     "Powers": ["Accident", "Astral Form", "Concealment", "Confusion", "Enhanced Senses (Low-Light", "Thermographic Vision)", "Guard", "Influence", "Materialization", "Sapience", "Search"],
     "Optional Powers": ["Fear", "Innate Spell (any one spell known by the summoner; Force is limited to spirit’s Magic)", "Movement", "Psychokinesis"],
@@ -95,7 +95,7 @@ const SPIRITS = {
     "Init (Ast)": "(F*2)+3d6"
   },
   "Water": {
-    "type": "Water",
+    "Type": "Water",
     "Skills": ["Assensing", "Astral Combat", "Exotic Ranged Weapon", "Perception", "Unarmed Combat"],
     "Powers": ["Astral Form", "Concealment", "Confusion", "Engulf", "Materialization", "Movement", "Sapience", "Search"],
     "Optional Powers": ["Accident", "Binding", "Elemental Attack", "Energy Aura", "Guard", "Weather Control"],

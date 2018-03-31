@@ -10,7 +10,7 @@ function unCamel(str) {
     if(i === 0) { // start of string
       return acc + cur.toUpperCase();
     } else if(cur === cur.toUpperCase()) { // next word
-      return acc + ` ${cur}`
+      return acc + ` ${cur}`;
     } else {
       return acc + cur;
     }

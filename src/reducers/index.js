@@ -8,6 +8,9 @@ import {
   SET_SPELLS,
   SET_SPIRITS,
   SET_POWERS,
+  SET_PERSONA,
+  SET_COMPLEX_FORMS,
+  SET_SPRITES,
   SET_QUALITIES,
   SET_WAREZ,
   SET_CYBERDECK,
@@ -111,6 +114,38 @@ const initialState = {
       description: ""
     }
   ],
+  persona: {
+    rating: 0,
+    attack: 0,
+    sleaze: 0,
+    dataProcessing: 0,
+    firewall: 0,
+    submersion: 0,
+    echoes: []
+  },
+  complexForms: [
+    {
+      name: "",
+      target: "",
+      duration: "",
+      fade: "",
+      description: ""
+    }
+  ],
+  sprites: [
+    {
+      type: "",
+      registered: false,
+      attack: 0,
+      sleaze: 0,
+      dataProcessing: 0,
+      firewall: 0,
+      init: "",
+      res: 0,
+      skills: [],
+      powers: []
+    }
+  ],
   qualities: [
     {
       type: "",
@@ -209,6 +244,24 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         powers: action.payload
+      }
+    case SET_PERSONA:
+      return {
+        ...state,
+        persona: {
+          ...state.persona,
+          ...action.payload
+        }
+      }
+    case SET_COMPLEX_FORMS:
+      return {
+        ...state,
+        complexForms: action.payload
+      }
+    case SET_SPRITES:
+      return {
+        ...state,
+        sprites: action.sprites
       }
     case SET_QUALITIES:
       return {

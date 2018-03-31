@@ -21,6 +21,7 @@ class Sidebar extends Component {
         <Link onClick={this.props.onSelect} to='/summoning'><div className="navButton" id="summoningNav">Summoning</div></Link>
         <Link onClick={this.props.onSelect} to='/adept'><div className="navButton" id="adeptNav">Adept Powers</div></Link>
         <Link onClick={this.props.onSelect} to='/technomancer'><div className="navButton" id="technoNav">Technomancer</div></Link>
+        <Link onClick={this.props.onSelect} to='/compiling'><div className="navButton" id="compilingNav">Compiling</div></Link>
         <Link onClick={this.props.onSelect} to='/warez'><div className="navButton" id="warezNav">{this.warez}</div></Link>
         <Link onClick={this.props.onSelect} to='/decker'><div className="navButton" id="deckerNav">Decker</div></Link>
         <Link onClick={this.props.onSelect} to='/rigger'><div className="navButton" id="riggerNav">Rigger</div></Link>

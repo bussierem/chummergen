@@ -63,9 +63,12 @@ class Spells extends Component {
             <tr>
               <th></th>
               <th>Name</th>
-              <th>Cost</th>
-              <th>Rating</th>
-              <th>Description</th>
+              <th>Type</th>
+              <th>Target</th>
+              <th>Range</th>
+              <th>Duration</th>
+              <th>Drain</th>
+              <th>Notes</th>
             </tr>
             {
               this.props.spells.map((s, i) => {
