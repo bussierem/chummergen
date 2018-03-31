@@ -5,7 +5,11 @@ import {
   SET_LIFESTYLE,
   SET_CONTACTS,
   SET_GEAR,
+  SET_SPELLS,
+  SET_SPIRITS,
+  SET_POWERS,
   SET_QUALITIES,
+  SET_WAREZ,
   SET_CYBERDECK,
   SET_PROGRAMS,
   SET_DRONES
@@ -29,13 +33,11 @@ const initialState = {
     karmaTotal: 0,
   },
   lifestyle: {
-    // Lifestyle
     lifestyle: "",
     lifestyleLocation: "",
     monthsPaid: 0,
     cost: "",
   },
-  // Attributes
   attributes: {
     STR: new Attribute("STR"),
     AGI: new Attribute("AGI"),
@@ -68,11 +70,60 @@ const initialState = {
       price: 0
     }
   ],
+  spells: [
+    {
+      name: "",
+      type: "",
+      target: "",
+      range: "",
+      duration: "",
+      drain: "",
+      notes: ""
+    }
+  ],
+  spirits: [
+    {
+      type: "",
+      bound: false,
+      skills: [],
+      powers: [],
+      optionalPowers: [],
+      str: "",
+      agi: "",
+      rea: "",
+      bod: "",
+      wil: "",
+      int: "",
+      log: "",
+      cha: "",
+      edg: "",
+      ess: "",
+      mag: "",
+      physicalInit: "",
+      astralInit: ""
+    }
+  ],
+  powers: [
+    {
+      name: "",
+      cost: 0.0,
+      rating: 0,
+      description: ""
+    }
+  ],
   qualities: [
     {
       type: "",
       name: "",
       rating: 0,
+      notes: ""
+    }
+  ],
+  warez: [
+    {
+      name: "",
+      rating: 0,
+      essence: 0.0,
       notes: ""
     }
   ],
@@ -144,10 +195,30 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         gear: action.payload
       }
+    case SET_SPELLS:
+      return {
+        ...state,
+        spells: action.payload
+      }
+    case SET_SPIRITS:
+      return {
+        ...state,
+        spirits: action.payload
+      }
+    case SET_POWERS:
+      return {
+        ...state,
+        powers: action.payload
+      }
     case SET_QUALITIES:
       return {
         ...state,
         qualities: action.payload
+      }
+    case SET_WAREZ:
+      return {
+        ...state,
+        warez: action.payload
       }
     case SET_CYBERDECK:
       return {

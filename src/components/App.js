@@ -7,7 +7,11 @@ import PersonalInfo from './PersonalInfo';
 import AttrSkills from './AttrSkills';
 import Contacts from './Contacts';
 import Gear from './Gear';
+import Spells from './Spells';
+import Spirits from './Spirits';
+import Powers from './Powers';
 import Qualities from './Qualities';
+import Warez from './Warez';
 import Decker from './Decker';
 import Rigger from './Rigger';
 
@@ -61,7 +65,10 @@ class App extends Component {
           <Route exact path='/attrSkills' component={AttrSkills}/>
           <Route exact path='/contacts' component={Contacts}/>
           <Route exact path='/gear' component={Gear}/>
-
+          <Route exact path='/spellcasting' component={Spells}/>
+          <Route exact path='/summoning' component={Spirits}/>
+          <Route exact path='/adept' component={Powers}/>
+          <Route exact path='/warez' component={Warez}/>
           <Route exact path='/decker' component={Decker}/>
           <Route exact path='/rigger' component={Rigger}/>
         </div>
@@ -72,11 +79,7 @@ class App extends Component {
 
 /*
   <Route exact path='/notes' component={Notes}/>
-  <Route exact path='/spellcasting' component={Spellcasting}/>
-  <Route exact path='/summoning' component={Summoning}/>
-  <Route exact path='/adept' component={Adept}/>
   <Route exact path='/technomancer' component={Technomancer}/>
-  <Route exact path='/warez' component={Warez}/>
   <Route exact path='/settings' component={Settings}/>
 */
 

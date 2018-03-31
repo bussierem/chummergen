@@ -12,5 +12,5 @@ OPTIONAL ELEMENTS:
     Magic
   Technomancer
   Cyberware
-  Decker
+  --Decker
   --Rigger

@@ -79,50 +79,50 @@ class Rigger extends Component {
                 return (
                   <tr key={i} id={`drones_${i}`}>
                     <td>
-                      <button id="drones_0_reorder" onClick="">=</button>
+                      <button id={`drone_${i}_reorder`} onClick="">=</button>
                     </td>
                     <td>
-                      <input type="text" id="drones_0_name"
+                      <input type="text" id={`drone_${i}_name`}
                         defaultValue={c.name}
                         onChange={this.dataChanged}/>
                     </td>
                     <td>
-                      <input type="number" id="drones_0_pilot"
+                      <input type="number" id={`drone_${i}_pilot`}
                         defaultValue={c.pilot}
                         onChange={this.dataChanged}/>
                     </td>
                     <td>
-                      <input type="number" id="drones_0_body"
+                      <input type="number" id={`drone_${i}_body`}
                         defaultValue={c.body}
                         onChange={this.dataChanged}/>
                     </td>
                     <td>
-                      <input type="number" id="drones_0_armor"
+                      <input type="number" id={`drone_${i}_armor`}
                         defaultValue={c.armor}
                         onChange={this.dataChanged}/>
                     </td>
                     <td>
-                      <input type="number" id="drones_0_speed"
+                      <input type="number" id={`drone_${i}_speed`}
                         defaultValue={c.speed}
                         onChange={this.dataChanged}/>
                     </td>
                     <td>
-                      <input type="number" id="drones_0_accel"
+                      <input type="number" id={`drone_${i}_accel`}
                         defaultValue={c.accel}
                         onChange={this.dataChanged}/>
                     </td>
                     <td>
-                      <input type="number" id="drones_0_handling"
+                      <input type="number" id={`drone_${i}_handling`}
                         defaultValue={c.handling}
                         onChange={this.dataChanged}/>
                     </td>
                     <td>
-                      <input type="number" id="drones_0_sensor"
+                      <input type="number" id={`drone_${i}_sensor`}
                         defaultValue={c.sensor}
                         onChange={this.dataChanged}/>
                     </td>
                     <td>
-                      <textarea id="drones_0_notes"
+                      <textarea id={`drone_${i}_notes`}
                         defaultValue={c.notes}
                         onChange={this.dataChanged}>
                       </textarea>

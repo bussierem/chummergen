@@ -66,23 +66,23 @@ class Programs extends Component {
               return (
                 <tr key={i} id={`program_${i}`}>
                   <td>
-                    <input type="checkbox" id="program_0_loaded"
+                    <input type="checkbox" id={`program_${i}_loaded`}
                       defaultValue={p.loaded}
                       onChange={this.dataChanged}/>
                   </td>
                   <td>
-                    <input type="text" id="program_0_name"
+                    <input type="text" id={`program_${i}_name`}
                       defaultValue={p.name}
                       onChange={this.dataChanged}/>
                   </td>
                   <td>
-                  <select id="program_0_type" onChange={this.dataChanged} defaultValue={p.type}>
+                  <select id={`program_${i}_type`} onChange={this.dataChanged} defaultValue={p.type}>
                     <option value="Common">Common</option>
                     <option value="Hacking">Hacking</option>
                   </select>
                   </td>
                   <td>
-                    <textarea id="program_0_description"
+                    <textarea id={`program_${i}_description`}
                       defaultValue={p.description}
                       onChange={this.dataChanged}>
                     </textarea>

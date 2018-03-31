@@ -61,20 +61,20 @@ class Contacts extends Component {
             this.props.contacts.map((c, i) => {
               return (
                 <div key={i} id={`contact_${i}`}>
-                  <label htmlFor="contact_0_name">Name:</label>
-                  <input type="text" id="contact_0_name"
+                  <label htmlFor={`contact_${i}_name`}>Name:</label>
+                  <input type="text" id={`contact_${i}_name`}
                     defaultValue={c.name}
                     onChange={this.dataChanged}/>
-                  <label htmlFor="contact_0_conn">Connection:</label>
-                  <input type="number" id="contact_0_conn"
+                  <label htmlFor={`contact_${i}_conn`}>Connection:</label>
+                  <input type="number" id={`contact_${i}_conn`}
                     defaultValue={c.connection}
                     onChange={this.dataChanged}/>
-                  <label htmlFor="contact_0_loyal">Loyalty:</label>
-                  <input type="number" id="contact_0_loyal"
+                  <label htmlFor={`contact_${i}_loyal`}>Loyalty:</label>
+                  <input type="number" id={`contact_${i}_loyal`}
                     defaultValue={c.loyalty}
                     onChange={this.dataChanged}/><br />
-                  <label htmlFor="contact_0_notes">Notes:</label>
-                  <textarea id="contact_0_notes"
+                  <label htmlFor={`contact_${i}_notes`}>Notes:</label>
+                  <textarea id={`contact_${i}_notes`}
                     defaultValue={c.notes}
                     onChange={this.dataChanged}>
                   </textarea>

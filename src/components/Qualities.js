@@ -69,34 +69,36 @@ class Qualities extends Component {
               return (
                 <tr key={i} id={`quality_${i}`}>
                   <td>
-                    <button id="quality_0_reorder" onClick="">=</button>
+                    <button id={`quality_${i}_reorder" onClick="`}>=</button>
                   </td>
                   <td>
-                    <input type="radio" name="quality_0_type" value="pos"
+                    <input type="radio" name={`quality_${i}_type`}
+                      value="pos"
                       defaultChecked={q.type === "pos"}
                       onChange={this.dataChanged}
                     />+
-                    <input type="radio" name="quality_0_type" value="neg"
+                    <input type="radio" name={`quality_${i}_type`}
+                      value="neg"
                       defaultChecked={q.type === "neg"}
                       onChange={this.dataChanged}
                     />-
                   </td>
                   <td>
-                    <input type="text" id="quality_0_name"
+                    <input type="text" id={`quality_${i}_name`}
                       defaultValue={q.name}
                       onChange={this.dataChanged}/>
                   </td>
                   <td>
-                    <input type="number" id="quality_0_rating"
+                    <input type="number" id={`quality_${i}_rating`}
                       defaultValue={q.rating}
                       onChange={this.dataChanged}/>
                   </td>
                   <td>
-                    <button id="quality_0_delete" onClick="">X</button>
+                    <button id={`quality_${i}_delete" onClick="`}>X</button>
                   </td>
-                  <button id="quality_0_notes_toggle" onClick="">></button>
-                  <label htmlFor="quality_0_notes">Notes:</label>
-                  <textarea id="quality_0_notes"
+                  <button id={`quality_${i}_notes_toggle" onClick="`}>></button>
+                  <label htmlFor={`quality_${i}_notes`}>Notes:</label>
+                  <textarea id={`quality_${i}_notes`}
                     defaultValue={q.notes}
                     onChange={this.dataChanged}>
                   </textarea>

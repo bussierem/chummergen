@@ -71,31 +71,32 @@ class Gear extends Component {
                 return (
                   <tr key={i} id={`gear_${i}`}>
                     <td>
-                      <button id="gear_0_reorder" onClick="">=</button>
+                      <button id={`gear_${i}_reorder`}
+                      onClick="">=</button>
                     </td>
                     <td>
-                      <input type="text" id="gear_0_name"
+                      <input type="text" id={`gear_${i}_name`}
                         defaultValue={c.name}
                         onChange={this.dataChanged}/>
                     </td>
                     <td>
-                      <textarea id="gear_0_description"
+                      <textarea id={`gear_${i}_description`}
                         defaultValue={c.description}
                         onChange={this.dataChanged}>
                       </textarea>
                     </td>
                     <td>
-                      <input type="number" id="gear_0_rating"
+                      <input type="number" id={`gear_${i}_rating`}
                         defaultValue={c.rating}
                         onChange={this.dataChanged}/>
                     </td>
                     <td>
-                      <input type="number" id="gear_0_count"
+                      <input type="number" id={`gear_${i}_count`}
                         defaultValue={c.count}
                         onChange={this.dataChanged}/>
                     </td>
                     <td>
-                      <input type="number" id="gear_0_price"
+                      <input type="number" id={`gear_${i}_price`}
                         defaultValue={c.price}
                         onChange={this.dataChanged}/>
                     </td>

@@ -587,3 +587,74 @@ MAGIC
       You can run up sheer walls or other vertical surfaces a limited distance. Make a Running + Strength [Magic] Test, with hits indicating the number of meters you may climb up in an action phase. If you want to run up longer distances, you’ll need steps, ledges, or somewhere you can stop and then use this power again. If you want to run across a vertical surface instead of up it, you can do so by combining this power with a Sprint action (p. 162). At the end of your movement, you fall off the wall, whether you made it as far as you wanted or not.
 
 === === === === === === === === === === ===
+
+TECHNOMANCER
+  Living Persona
+    Device Rating     [RES]
+    Attack            [CHA]
+    Sleaze            [INT]
+    Data Processing   [LOG]
+    Firewall          [WIL]
+    Submersion Grade
+  Complex Forms
+    | Name              | Target  | Duration | FV  |
+    | Cleaner           | Persona | P        | L+1 |
+    | Diffusion         | Device  | S        | L+1 |
+    | Editor            | File    | P        | L+2 |
+    | Infusion          | Device  | S        | L+1 |
+    | Static Veil       | Persona | S        | L-1 |
+    | Pulse Storm       | Persona | I        | L+0 |
+    | Puppeteer         | Device  | I        | L+4 |
+    | Resonance Channel | Device  | S        | L-1 |
+    | Resonance Spike   | Device  | I        | L+0 |
+    | Resonance Veil    | Device  | S        | L-1 |
+    | Static Bomb       | Self    | I        | L+2 |
+    | Stitches          | Sprite  | P        | L-2 |
+    | Transcendent Grid | Self    | I        | L-3 |
+    | Tattletale        | Persona | P        | L-2 |
+    ---
+    Cleaner
+      Illegal actions leave traces in the Matrix, but the Resonance can erase a few of them. Make a Simple Software + Resonance [Level] test. For each hit, reduce the target’s Overwatch Score by 1.
+    Diffusion
+      This complex form entry is shorthand for four different complex forms, one for each Matrix attribute. Make an Opposed Software + Resonance [Level] v. Willpower + Firewall test. If you win, the target’s attribute is reduced by your net hits. You can’t reduce an attribute to less than 1.
+    Editor
+      You infuse a file with Resonance long enough to manipulate its contents. Make a Software + Resonance [Level] test against the Intuition + Data Processing of the file’s owner. You can make the same amount of changes to the file that you would be able to make with your net hits in Edit File actions.
+    Infusion
+      This complex form entry is shorthand for four different complex forms, one for each Matrix attribute. Resonance floods the target device, boosting the specified attribute. The Level of the complex form must equal or exceed the value of the attribute being affected. The attribute is increased by the number of hits scored, up to twice the target’s normal rating (any hits that would increase the attribute beyond this maximum are ignored). Each attribute can only be affected by a single Infusion at a time. If an attribute boosted by this complex form is swapped in a Reconfigure action, this complex form ends.
+    Static Veil
+      Resonance energy coils around you, hiding you from GOD. Make a Simple Software + Resonance [Level] test with a threshold of 1 if the target is on the public grid and 2 on any other grid. As long as you sustain this complex form and the target doesn’t hop to another grid, the veiled persona’s Overwatch Score doesn’t increase due to time (p. 231). It still increases as a result of the target’s illegal actions, though.
+    Pulse Storm
+      You pull signals out of the Resonance and surround the target with them. Make a Software + Resonance [Level] v. Logic + Data Processing test. For each net hit you get, the target’s noise is increased by 1.
+    Puppeteer
+      You push Resonance commands into a target, forcing it to perform a Matrix action. Pick a target and a Matrix action for it to perform. Make a Software + Resonance [Level] v. Willpower + Firewall test with a threshold based on the type of action: 1 for a Free Action, 2 for Simple, and 3 for Complex. If you succeed, the target performs that Matrix action as its next available action.
+    Resonance Channel
+      Instead of using Matrix channels, you communicate through a Resonance channel. Make a Simple Software + Resonance [Level] test. For each net hit, reduce the noise due to distance from the target device by 1.
+    Resonance Spike
+      You send a spike of raw destructive Resonance into the target, causing errors and mayhem. Make a Software + Resonance [Level] v. Willpower + Firewall test. Your target takes 1 box of Matrix damage per net hit, with no chance to resist.
+    Resonance Veil
+      This complex form lets you make the target believe something has happened in the Matrix. It’s a convincing illusion if you can succeed in a Software + Resonance [Level] v. Intuition + Data Processing test. Even if the target has reason to believe what it’s seeing is fake, it needs to make a Matrix Perception Test with a threshold equal to your net hits to see through the illusion.
+    Static Bomb
+      Make a Software + Resonance [Level] v. Intuition + Data Processing test against all icons that have spotted you. If there’s more than one, compare your hits to each of theirs separately. Each icon you beat loses you, and you’re no longer spotted by those icons. Any icon that has a mark on you doesn’t lose you, of course.
+    Stitches
+      You knit the Resonance patterns in a sprite back together. Make a Simple Software + Resonance [Level] test. For each hit, remove 1 box of Matrix damage from the target sprite.
+    Transcendent Grid
+      You broaden your connection to the Matrix and connect to all grids at once. You take no penalty for acting across grids (because you’re on all of them), but neither do others targeting you. You also don’t take a penalty from the public grid. Make a Simple Software + Resonance [Level] Test. The effect persists for one minute for every hit you get. When you run out of hits, the complex form ends.
+    Tattletale
+      The Resonance can be used to mimic the telltale signs of illegal activity in the Matrix — to your target’s sorrow. Make a Simple Software + Resonance [Level] test. For each hit, increase the target’s Overwatch Score by 1. This only works if your target has an Overwatch Score.
+  Sprites
+    | Name    | A   | S   | D   | F   | Init        | RES | Skills                         | Powers                           |
+    | Courier | L   | L+3 | L+1 | L+2 | (Lx2)+1+4d6 | L   | Computer, Hacking              | Cookie, Hash                     |
+    | Crack   | L   | L+3 | L+2 | L+1 | (Lx2)+2+4d6 | L   | Computer, E-War, Hacking       | Suppression                      |
+    | Data    | L-1 | L   | L+4 | L+1 | (Lx2)+4+4d6 | L   | Computer, E-War                | Camouflage, Watermark            |
+    | Fault   | L+3 | L   | L+1 | L+2 | (Lx2)+1+4d6 | L   | Computer, Cybercombat, Hacking | Electron Storm                   |
+    | Machine | L+1 | L   | L+3 | L+2 | (Lx2)+3+4d6 | L   | Computer, E-War, Hardware      | Diagnostics, Gremlins, Stability |
+  Submersion Echoes
+    Attack Upgrade:  +1 Attack [Max 2]
+    Data Processing Upgrade: +1 Data Processing [Max 2]
+    Firewall Upgrade: +1 Firewall [Max 2]
+    Mind Over Machine: Rating 1 Control Rig, no Essence cost [Max 3]
+    Neurofilter: +1 Dice to resist Biofeedback damage [Max 2]
+    Overclocking: +1d6 Initiative Dice in Hot-Sim VR [Max 1]
+    Resonance Link: 1-way Empathic Link with another Technomancer of your choice
+    Resonance [Program]: You may copy the effects of one Common or Hacking program
+    Sleaze Upgrade:  +1 Sleaze [Max 2]
