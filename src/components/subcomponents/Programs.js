@@ -66,6 +66,9 @@ class Programs extends Component {
               return (
                 <tr key={i} id={`program_${i}`}>
                   <td>
+                    <i className='fa fa-reorder' id={`program_${i}_reorder`}></i>
+                  </td>
+                  <td>
                     <input type="checkbox" id={`program_${i}_loaded`}
                       defaultValue={p.loaded}
                       onChange={this.dataChanged}/>
@@ -92,7 +95,7 @@ class Programs extends Component {
             })
           }
         </table>
-        <button id="addProgram" onClick="">New Program</button>
+        <button id="addProgram" onClick="">+</button>
       </div>
     );
   }

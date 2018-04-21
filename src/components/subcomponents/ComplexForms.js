@@ -68,8 +68,7 @@ class ComplexForms extends Component {
               return (
                 <tr key={i} id={`complexForm_${i}`}>
                   <td>
-                    <button id={`complexForm_${i}_reorder`}
-                    onClick="">=</button>
+                    <i className='fa fa-reorder' id={`complexForm_${i}_reorder`}></i>
                   </td>
                   <td>
                     <input type="text" id={`complexForm_${i}_name`}
@@ -102,7 +101,7 @@ class ComplexForms extends Component {
             })
           }
         </table>
-        <button id="addComplexForms" onClick={this.addComplexForms}>New Item</button>
+        <button id="addComplexForms" onClick={this.addComplexForms}>+</button>
       </div>
     );
   }

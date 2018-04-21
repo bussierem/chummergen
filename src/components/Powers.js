@@ -69,7 +69,7 @@ class Powers extends Component {
                 return (
                   <tr key={i} id={`power_${i}`}>
                     <td>
-                      <button id={`power_${i}_reorder`} onClick="">=</button>
+                      <i className='fa fa-reorder' id={`power_${i}_reorder`}></i>
                     </td>
                     <td>
                       <input type="text" id={`power_${i}_name`}
@@ -98,7 +98,7 @@ class Powers extends Component {
               })
             }
           </table>
-          <button id="addPowers" onClick={this.addPowers}>New Item</button>
+          <button id="addPowers" onClick={this.addPowers}>+</button>
         </PageSection>
       </div>
     );

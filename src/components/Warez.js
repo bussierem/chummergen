@@ -69,7 +69,7 @@ class Warez extends Component {
                 return (
                   <tr key={i} id={`warez_${i}`}>
                     <td>
-                      <button id={`warez_${i}_reorder`} onClick="">=</button>
+                      <i className='fa fa-reorder' id={`warez_${i}_reorder`}></i>
                     </td>
                     <td>
                       <input type="text" id={`warez_${i}_name`}
@@ -98,7 +98,7 @@ class Warez extends Component {
               })
             }
           </table>
-          <button id="addWarez" onClick={this.addWarez}>New Item</button>
+          <button id="addWarez" onClick={this.addWarez}>+</button>
         </PageSection>
       </div>
     );

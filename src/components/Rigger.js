@@ -79,7 +79,7 @@ class Rigger extends Component {
                 return (
                   <tr key={i} id={`drones_${i}`}>
                     <td>
-                      <button id={`drone_${i}_reorder`} onClick="">=</button>
+                      <i className='fa fa-reorder' id={`drone_${i}_reorder`}></i>
                     </td>
                     <td>
                       <input type="text" id={`drone_${i}_name`}
@@ -132,7 +132,7 @@ class Rigger extends Component {
               })
             }
           </table>
-          <button id="addDrones" onClick={this.addDrones}>New Item</button>
+          <button id="addDrones" onClick={this.addDrones}>+</button>
         </PageSection>
       </div>
     );

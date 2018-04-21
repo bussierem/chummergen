@@ -98,7 +98,7 @@ class Skills extends Component {
               return (
                 <tr key={i} id={`skill_${i}`}>
                   <td>
-                    <button id={`skill_${i}_reorder`} onClick="">=</button>
+                    <i className='fa fa-reorder' id={`skill_${i}_reorder`}></i>
                   </td>
                   <td>
                     <input type="text" id={`skill_${i}_name`} />
@@ -149,7 +149,7 @@ class Skills extends Component {
             })
           }
         </table>
-        <button id="addSkill" onClick="">New Skill</button>
+        <button id="addSkill" onClick="">+</button>
       </div>
     );
   }

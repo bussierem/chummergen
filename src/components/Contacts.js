@@ -61,6 +61,7 @@ class Contacts extends Component {
             this.props.contacts.map((c, i) => {
               return (
                 <div key={i} id={`contact_${i}`}>
+                  <i className='fa fa-reorder' id={`contact_${i}_reorder`}></i>
                   <label htmlFor={`contact_${i}_name`}>Name:</label>
                   <input type="text" id={`contact_${i}_name`}
                     defaultValue={c.name}
@@ -82,7 +83,7 @@ class Contacts extends Component {
               )
             })
           }
-          <br/><button id="addContact" onClick={this.addContact}>New Contact</button>
+          <br/><button id="addContact" onClick={this.addContact}>+</button>
         </PageSection>
       </div>
     );

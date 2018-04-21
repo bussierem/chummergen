@@ -3,6 +3,8 @@ import { setBaseAttrs, setCharInfo } from '../../actions/index'
 import { connect } from "react-redux";
 // Constant imports
 import METATYPES from '../../structs/Metatype';
+// Style
+import '../../styles/charInfo.css';
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -56,31 +58,44 @@ class CharacterInfo extends Component {
   render() {
     return (
       <div id='characterInfoDiv'>
-        <label htmlFor="realName">Real Name:</label>
-        <input type="text" id="realName" onChange={this.dataChanged} defaultValue={this.props.charInfo.realName}/><br />
-        <label htmlFor="streetName">Street Name:</label>
-        <input type="text" id="streetName" onChange={this.dataChanged} defaultValue={this.props.charInfo.streetName}/><br />
-        <label htmlFor="metatype">Metatype:</label>
-        <select id="metatype" onChange={this.metatypeChange} value={this.props.charInfo.metatype}>
-          <option id="noMeta" value="">--</option>
-          <option id="human" value="human">Human</option>
-          <option id="elf" value="elf">Elf</option>
-          <option id="dwarf" value="dwarf">Dwarf</option>
-          <option id="ork" value="ork">Ork</option>
-          <option id="troll" value="troll">Troll</option>
-        </select><br />
-        <label htmlFor="gender">Gender:</label>
-        <select id="gender" onChange={this.dataChanged} value={this.props.charInfo.gender}>
-          <option id="noGender" value="">--</option>
-          <option id="male" value="male">Male</option>
-          <option id="female" value="female">Female</option>
-        </select><br />
-        <label htmlFor="age">Age:</label>
-        <input type="text" id="age" onChange={this.dataChanged} defaultValue={this.props.charInfo.age}/><br />
-        <label htmlFor="height">Height:</label>
-        <input type="text" id="height" onChange={this.dataChanged} defaultValue={this.props.charInfo.height}/><br />
-        <label htmlFor="weight">Weight:</label>
-        <input type="text" id="weight" onChange={this.dataChanged} defaultValue={this.props.charInfo.weight}/><br />
+
+        <div className="charContainer1">
+          <span className="realNameContainer">
+            <label htmlFor="realName">Real Name:</label>
+            <input type="text" id="realName" onChange={this.dataChanged} defaultValue={this.props.charInfo.realName}/>
+          </span>
+          <span className="metatypeContainer">
+            <label htmlFor="metatype">Metatype:</label>
+            <select id="metatype" onChange={this.metatypeChange} value={this.props.charInfo.metatype}>
+              <option id="noMeta" value="">--</option>
+              <option id="human" value="human">Human</option>
+              <option id="elf" value="elf">Elf</option>
+              <option id="dwarf" value="dwarf">Dwarf</option>
+              <option id="ork" value="ork">Ork</option>
+              <option id="troll" value="troll">Troll</option>
+            </select>
+          </span>
+          <span className="realNameContainer">
+            <label htmlFor="streetName">Street Name:</label>
+            <input type="text" id="streetName" onChange={this.dataChanged} defaultValue={this.props.charInfo.streetName}/><br />
+          </span>
+        </div>
+
+        <div className="charContainer2">
+          <label htmlFor="gender">Gender:</label>
+          <select id="gender" onChange={this.dataChanged} value={this.props.charInfo.gender}>
+            <option id="noGender" value="">--</option>
+            <option id="male" value="male">Male</option>
+            <option id="female" value="female">Female</option>
+          </select>
+          <label htmlFor="age">Age:</label>
+          <input type="text" id="age" onChange={this.dataChanged} defaultValue={this.props.charInfo.age}/>
+          <label htmlFor="height">Height:</label>
+          <input type="text" id="height" onChange={this.dataChanged} defaultValue={this.props.charInfo.height}/>
+          <label htmlFor="weight">Weight:</label>
+          <input type="text" id="weight" onChange={this.dataChanged} defaultValue={this.props.charInfo.weight}/>
+        </div>
+
         <label htmlFor="streetCred">Street Cred:</label>
         <input type="number" id="streetCred" onChange={this.dataChanged} defaultValue={this.props.charInfo.streetCred}/><br />
         <label htmlFor="notoriety">Notoriety:</label>

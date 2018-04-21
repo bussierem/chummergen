@@ -11,7 +11,7 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="nav">
-        <Link onClick={this.props.onSelect} to='/notes'><div className="navButton" id="notesNav">Notes</div></Link>
+        <Link onClick={this.props.onSelect} to='/notes'><div className="navButton" id="notesNav">Notes</div></Link><br />
         <Link onClick={this.props.onSelect} to='/personalInfo'><div className="navButton" id="personalInfoNav">Personal Info</div></Link>
         <Link onClick={this.props.onSelect} to='/qualities'><div className="navButton" id="qualitiesNav">Qualities</div></Link>
         <Link onClick={this.props.onSelect} to='/attrSkills'><div className="navButton" id="attrSkillsNav">Attributes & Skills</div></Link>

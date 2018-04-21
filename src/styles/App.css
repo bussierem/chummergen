@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100%;
+  line-height: normal;
 }
 
 .App-header {
@@ -20,13 +22,15 @@
 
 a {
   text-decoration: none;
+  width: 100%;
 }
 
-.nav {
+div.nav {
   background-color: #277591;
   position: absolute;
   top: 0; bottom: 0; left: 0;
   width: 15%;
+  height: 100%;
 }
 
 .navButton {
@@ -56,10 +60,11 @@ a {
 }
 
 .sectionTitle {
-
+  vertical-align: middle;
 }
 
 .sectionContainer {
+  background: #559ab3;
 }
 
 .content {
@@ -76,7 +81,7 @@ a {
 }
 
 .sectionTitleContainer {
-  margin-top: -20px;
+  margin-top: 36px;
   width: 100%;
   height: 32px;
   font-family: 'Lato', sans-serif;
@@ -87,8 +92,4 @@ a {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   background: #277591;
   border: 0;
-}
-
-.expandingTable {
-  margin: 0 auto;
 }

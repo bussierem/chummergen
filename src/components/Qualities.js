@@ -69,7 +69,7 @@ class Qualities extends Component {
               return (
                 <tr key={i} id={`quality_${i}`}>
                   <td>
-                    <button id={`quality_${i}_reorder" onClick="`}>=</button>
+                    <i className='fa fa-reorder' id={`quality_${i}_reorder`}></i>
                   </td>
                   <td>
                     <input type="radio" name={`quality_${i}_type`}
@@ -107,6 +107,7 @@ class Qualities extends Component {
             })
           }
         </table>
+        <button id="addQualities" onClick={this.addQualities}>+</button>
         </PageSection>
       </div>
     );

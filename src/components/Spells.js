@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { setSpells } from '../actions/index'
 // Component imports
 import PageSection from './PageSection';
+import '../styles/spells.css';
 
 function mapStateToProps(state) {
   return {
@@ -59,67 +60,73 @@ class Spells extends Component {
     return (
       <div id="spellsDiv">
         <PageSection sectionTitle=''>
-          <table className="expandingTable">
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Target</th>
-              <th>Range</th>
-              <th>Duration</th>
-              <th>Drain</th>
-              <th>Notes</th>
-            </tr>
-            {
-              this.props.spells.map((s, i) => {
-                return (
-                  <tr key={i} id={`spell_${i}`}>
-                    <td>
-                      <button id={`spell_${i}_reorder`}
-                      onClick="">=</button>
-                    </td>
-                    <td>
+          {
+            this.props.spells.map((s, i) => {
+              return (
+                <table key={i} className='cardTable' id={`spell_${i}`} cellpadding="10">
+                  <tr>
+                    <td className="extra" rowspan="7"><i className='fa fa-reorder' id={`spell_${i}_reorder`}></i></td>
+                    <td className="left"><label htmlFor={`spell_${i}_name`}>Name:</label></td>
+                    <td className="right">
                       <input type="text" id={`spell_${i}_name`}
                         defaultValue={s.name}
                         onChange={this.dataChanged}/>
                     </td>
-                    <td>
+                  </tr>
+                  <tr>
+                    <td className="left"><label htmlFor={`spell_${i}_type`}>Type:</label></td>
+                    <td className="right">
                       <input type="text" id={`spell_${i}_type`}
                         defaultValue={s.type}
                         onChange={this.dataChanged}/>
                     </td>
-                    <td>
+                  </tr>
+                  <tr>
+                    <td className="left"><label htmlFor={`spell_${i}_target`}>Target:</label></td>
+                    <td className="right">
                       <input type="text" id={`spell_${i}_target`}
                         defaultValue={s.target}
                         onChange={this.dataChanged}/>
                     </td>
-                    <td>
+                  </tr>
+                  <tr>
+                    <td className="left"><label htmlFor={`spell_${i}_range`}>Range:</label></td>
+                    <td className="right">
                       <input type="text" id={`spell_${i}_range`}
                         defaultValue={s.range}
                         onChange={this.dataChanged}/>
                     </td>
-                    <td>
+                  </tr>
+                  <tr>
+                    <td className="left"><label htmlFor={`spell_${i}_duration`}>Duration:</label></td>
+                    <td className="right">
                       <input type="text" id={`spell_${i}_duration`}
                         defaultValue={s.duration}
                         onChange={this.dataChanged}/>
                     </td>
-                    <td>
+                  </tr>
+                  <tr>
+                    <td className="left"><label htmlFor={`spell_${i}_drain`}>Drain:</label></td>
+                    <td className="right">
                       <input type="text" id={`spell_${i}_drain`}
                         defaultValue={s.drain}
                         onChange={this.dataChanged}/>
                     </td>
-                    <td>
+                  </tr>
+                  <tr>
+                    <td className="left"><label htmlFor={`spell_${i}_notes`}>Notes:</label></td>
+                    <td className="right">
                       <textarea id={`spell_${i}_notes`}
                         defaultValue={s.notes}
                         onChange={this.dataChanged}>
                       </textarea>
                     </td>
                   </tr>
-                )
-              })
-            }
-          </table>
-          <button id="addSpells" onClick={this.addSpells}>New Item</button>
+                </table>
+              )
+            })
+          }
+          <button id="addSpells" onClick={this.addSpells}>+</button>
         </PageSection>
       </div>
     );

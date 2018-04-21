@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { setGear } from '../actions/index'
 // Component imports
 import PageSection from './PageSection';
+// Styles
+import '../styles/tables.css';
 
 function mapStateToProps(state) {
   return {
@@ -58,32 +60,28 @@ class Gear extends Component {
       <div id="gearDiv">
         <PageSection sectionTitle=''>
           <table className="expandingTable">
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Rating</th>
-              <th>Count</th>
-              <th>Price (¥ )</th>
-            </tr>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Count</th>
+                <th>Price ( ¥ )</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
             {
               this.props.gear.map((c, i) => {
                 return (
                   <tr key={i} id={`gear_${i}`}>
                     <td>
-                      <button id={`gear_${i}_reorder`}
-                      onClick="">=</button>
+                      <i className='fa fa-reorder' id={`gear_${i}_reorder`}></i>
                     </td>
                     <td>
                       <input type="text" id={`gear_${i}_name`}
                         defaultValue={c.name}
                         onChange={this.dataChanged}/>
-                    </td>
-                    <td>
-                      <textarea id={`gear_${i}_description`}
-                        defaultValue={c.description}
-                        onChange={this.dataChanged}>
-                      </textarea>
                     </td>
                     <td>
                       <input type="number" id={`gear_${i}_rating`}
@@ -100,12 +98,19 @@ class Gear extends Component {
                         defaultValue={c.price}
                         onChange={this.dataChanged}/>
                     </td>
+                    <td>
+                      <textarea id={`gear_${i}_description`}
+                        defaultValue={c.description}
+                        onChange={this.dataChanged}>
+                      </textarea>
+                    </td>
                   </tr>
                 )
               })
             }
+            </tbody>
           </table>
-          <button id="addGear" onClick={this.addGear}>New Item</button>
+          <button id="addGear" onClick={this.addGear}>+</button>
         </PageSection>
       </div>
     );
