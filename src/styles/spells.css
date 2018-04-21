@@ -1,0 +1,14 @@
+table.cardTable {
+  width: 33%;
+  background-color: #914927;
+  margin: 20px;
+}
+table.cardTable td.left {
+  text-align: right;
+}
+table.cardTable td.right {
+  text-align: left;
+}
+table.cardTable label {
+  padding-right: 10px;
+}

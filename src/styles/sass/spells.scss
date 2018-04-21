@@ -1,0 +1,18 @@
+table.cardTable {
+  width: 33%;
+  background-color: #914927;
+  margin: 20px;
+  // border-collapse: separate;
+
+  td.left {
+    text-align: right;
+  }
+
+  td.right {
+    text-align: left;
+  }
+
+  label {
+    padding-right: 10px;
+  }
+}

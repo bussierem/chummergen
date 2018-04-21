@@ -1,0 +1,14 @@
+$prime-font: Helvetica, sans-serif;
+
+body {
+  font: 100% $prime-font;
+}
+
+tr {
+  &nth-child(2n+2) {
+    background-color: #CCC;
+  }
+  &nth-child(2n+1) {
+    background-color: #FFF;
+  }
+}

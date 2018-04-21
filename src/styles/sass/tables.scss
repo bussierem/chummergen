@@ -1,0 +1,36 @@
+tbody {
+  tr {
+    width: 35%;
+    &:nth-of-type(odd) {
+      background: #277591;
+    }
+    &:nth-of-type(even) {
+      background: #559ab3;
+    }
+    td {
+      vertical-align: top;
+      padding: 5px;
+    }
+  }
+}
+
+table.expandingTable {
+  margin: 0 auto;
+  border-spacing: 0px;
+}
+
+button[id^='add'] {
+  border: 0;
+  background-color: #38cc5f;
+  box-shadow: none;
+  border-radius: 0px;
+  width: 50px;
+  height: 50px;
+  font-size: 22pt;
+  vertical-align: middle;
+  text-align: center;
+}
+
+i.fa-reorder {
+  font-size: 22pt;
+}
